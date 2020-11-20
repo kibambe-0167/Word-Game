@@ -1,0 +1,126 @@
+
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	/*background-color: red;*/
+	font-family: fantasy, Arial, sans-serif;
+}
+
+.header {
+	background-color: rgb(20, 20, 10);
+	color: rgb( 255, 255, 255 );
+	padding: 5px;
+	/* text-align: center; */
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+#logo {
+	font-size: 1.5em;
+	color: rgb( 255, 255, 255 );
+}
+
+.navB {
+	/* display: inline-block; */
+	/* text-align: right; */
+	margin-right: 5px;
+}
+
+#board {
+	text-align: right;
+	padding-right: 10px;
+	margin-bottom: 20px;
+}
+#score {
+	color: rgb( 0, 0, 150);
+}
+
+#puz_word {
+	text-align: center;
+	padding-bottom: 20px;
+	font-size: 1.8em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	word-spacing: 5px;
+	font-family: fantasy;
+}
+
+#enter {
+	text-align: center;
+	margin-top: 30px;	
+}
+
+#try_btn {
+	text-align: center;
+	padding-top: 10px;
+}
+
+#trybtn {
+	padding: 2px 40px;
+}
+
+/* #letter {
+} */
+
+#word, #letter {
+	width: 100%;
+	/*flex: 6;*/
+}
+input {
+	margin: 0px;
+	/* width: 100%; */
+}
+
+#nextWordbtn {
+	padding: 2px 18px;
+}
+
+.enter-div {
+	margin-left: 5px;
+	text-align: left;
+}
+
+#intructions {
+	font-size: 0.9em;
+	margin-bottom: 25px;
+	text-align: center;
+	padding: 0px 5px;
+	text-transform: capitalize;
+	font-style: italic;
+	color: red;
+}
+
+.about-main-div {
+	text-align: center;
+	padding: 20px 10px
+}
+
+.about-main-div p {
+	font-size: .9em;
+}
+
+
+
+@media ( min-width: 767px ) {
+	.enter-div {
+		display: inline-block;
+		width: 45%;
+	}
+}
+
+/*
+//
+//     __()< Quack!! Quack!! Quack!! Quack!!
+//    (  )
+//     ``
+//
+ */

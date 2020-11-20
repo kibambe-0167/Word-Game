@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Word Based Game: Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+     initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <!-- Header or tab -->
+    <div class="container-fluid bg-dark header"> 
+      <div class="row">
+        <div id="logo" class="nav navbar col-xs-4 col-sm-4
+        justify-content-center" >
+          <a href="index.html" id="logoLink" class="nav-item">
+          </a>
+        </div>
+
+        <div class="col-xs-8 col-sm-8 nav navbar 
+        justify-content-end" id="navB" >
+          <a href="about.html" class="nav-item ">About</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- The board for scores and number of lifes in future. -->
+    <div id="board">
+      <h2 >Score: </h2> <h2 id="score" value="" >0</h2>
+    </div>
+
+
+    <!-- Contains the puzzle word and instructions -->
+    <div class = "container" >
+      <div id="intructions"></div>
+
+      <div id="puz_word" value=""></div>
+    </div>
+
+
+    <!-- contains the input field. -->
+    <div id="enter" class="container">
+      <div class="form-group enter-div ">
+        <label for="letter">Try a letter</label>
+        <input typ="text" name="letter" id="letter" value=""
+          placeholder="Try a letter...." class="form-control" />
+      </div>
+
+      <div class="form-group enter-div " >
+        <label for="word">Try full word</label>
+        <input type="text" name="word" id="word" 
+          placeholder="Try a word...." class="form-control" />
+      </div>
+    </div>
+
+
+    <!-- Contains the buttons for checking input of user. -->
+    <div id="try_btn" class="container">
+      <input class="btn btn-primary btn-lg" type="button"
+       id="trybtn" value="Try" />
+      <input class="btn btn-primary btn-lg" type="button"
+       id="nextWordbtn" value="Next Word" />
+    </div>
+
+
+    <!-- jQuery and javascripts files imports -->
+    <script src="jQuery.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+<!-- 
+//
+//     __()< Quack!! Quack!! Quack!! Quack!!
+//    (  )
+//     ``
+//
+ -->
