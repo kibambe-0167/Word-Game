@@ -505,37 +505,6 @@ document.addEventListener("DOMContentLoaded",
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// onchange
-// oninput
-
-// TASK
-
-// Add a function that might give user an hint of the 
-// words in the puzzle. Something like a defination 
-// of the word.
-
-// Make a code that will disable on input field when the 
-// other field is not empty. To Avoid users submitting both
-// field with values.
-
-
-
 //
 //     __()< Quack!! Quack!! Quack!! Quack!!
 //    (  )
