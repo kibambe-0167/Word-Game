@@ -1,9 +1,9 @@
 
 
-var levelOneWords = ["hello", "mango", "space", "visual", "game",
+var levelOneWords = ["hello", "mango", "space", "visual", "games",
 	"script", "index", "solve", "shift", "editors", "while", "about",
 	"bemba", "range", "based", "faith", "style", "score", "words",
-	"equal", "drawn", "csharp", "would", "floor", "value", "their", 
+	"equal", "drawn", "csharp", "would", "floor", "value", "theirs", 
 	"puzzle", "chatbot", "chrome", "browser"
 
 ];
