@@ -56,7 +56,7 @@ $( function () {
 		// get the value of the change, which will be the level for the game.
 		var l = $("#level").val();
 		currentLevel = l;
-		console.log( currentLevel );
+		// console.log( currentLevel );
 	});
 	// console.log( currentLevel );
 
@@ -225,7 +225,7 @@ function find( word, puz, letter ) {
 	for ( var i = 0; i < word.length; i++ ) {
 		// check is letter is word and is the letter actually
 		//  represent and empty word in the puzzle word.
-		console.log(letter, word[i], i );
+		// console.log(letter, word[i], i );
 
 		if ( letter == word[ i ] && getSpaces.includes( i ) &&
 			puz[ i ] == "_" ) {
@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded",
 			var wordDocVar = document.getElementById("word");
 
   		var puzzle = puz_word.innerHTML;
-			console.log( puzzle );
+			// console.log( puzzle );
 			
 			// get data from letter field and change it to lower case
 			var letter = letter_var.value.toLowerCase();
@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded",
   		if ( letter.length == 1 ) { 
 				// change to lowser case and check if random 
 				// word from database contains the letter from user.
-				console.log( random_word, puzzle.length );
+				// console.log( random_word, puzzle.length );
 				var index = find( random_word, puzzle,
 					letter.toLowerCase() );
 
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded",
   				// console.log("At Index: ", index );
 
   				puzzle = puz_word.innerHTML;
-  				console.log( puzzle );
+  				// console.log( puzzle );
   				// console.log( puzzle.length );
 
   				var update_puz = "";
@@ -366,10 +366,10 @@ document.addEventListener("DOMContentLoaded",
   				}
 
   				score_var.innerHTML = update_score;
-  				console.log( "Score:", update_score );
+  				// console.log( "Score:", update_score );
 
   				puz_word.innerHTML = update_puz;
-					console.log( update_puz );
+					// console.log( update_puz );
 					
 					// this update another word puzzle
 					if(random_word.toLowerCase()==update_puz.toLowerCase()){
@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded",
 				
   			else {
   				// alert( "Did not happen");
-					console.log( "Did not happen".toUpperCase() );
+					// console.log( "Did not happen".toUpperCase() );
 					alert("Oops! Wrong Letter. Try Again...");
 
   				// making input field empty.
