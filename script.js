@@ -1,20 +1,36 @@
 
 
 var levelOneWords = ["hello", "mango", "space", "visual", "game",
-"script", "index", "solve", "shift", "zowe", "while", "about",
-"bemba", "range", "based", "faith", "style", "score", "words",
-"equal", "drawn", "csharp", "would", "floor", "value", "their", 
-"puzzle"
+	"script", "index", "solve", "shift", "editors", "while", "about",
+	"bemba", "range", "based", "faith", "style", "score", "words",
+	"equal", "drawn", "csharp", "would", "floor", "value", "their", 
+	"puzzle", "chatbot", "chrome", "browser"
 
 ];
 
-var words = [ "banana", "terminator", "programmer", 
-"maze runner","document", "debugger", "content", "university",
-"mathematics", "america", "south africa"
+var levelTwoWords = [ "banana","document", "debugger", "content",
+	"america", "outline", "timeline", "inspector", "legendaries",
+	"instructions", "pertaining", "collections", "extractions",
+	"activities", "classified", "assignments", "intrudingly", 
+	"uncountable", "netheness", "platform"
 
 ];
+
+var levelThreeWords = [ "university", "mathematics", "terminator",
+	"programmer", "maze runner", "south africa", "bootstrap",
+	"variables", "extraordinary", "life science", "dependencies",
+	"requested", "characteristics", "independent", "inspections",
+	"organizations", "pronunciations", "examinations", "buccaneer",
+	"lengedaries", "lengenbachite", "unimaginable", "particularly",
+	"translations", "johannesburg", "randomized", "localhost",
+	"randomization", "initialization", "pronunciational",
+	"classifications", "classificationally", "classificatorily",
+	"performance", "accessibility", "documenttation"
+
+];
+
 var spacing_char = "_"; // this is the spacing character.
-var len_words = words.length; //length of the array holding words.
+// var len_words = words.length; //length of the array holding words.
 var score = 0; // the playes score.
 var getSpaces = [];
 
@@ -25,6 +41,33 @@ var wordScore = 70;
 var random_word = getWord();
 // var random_word = "";
 var puzzle_word = "";
+// define a variable to hold the level of the game
+var currentLevel = "1";
+
+
+
+
+// this will be called. when the pages loads.
+$( function () {
+	// console.log("Running");
+	// get the tag with id: level and listen to any change from it
+	// and when there is change do:
+	var level = $("#level").change( function() {
+		// get the value of the change, which will be the level for the game.
+		var l = $("#level").val();
+		currentLevel = l;
+		console.log( currentLevel );
+	});
+	// console.log( currentLevel );
+
+
+
+
+
+
+
+
+});
 
 function getRandNumber(max, min) {
 	// returns the floor of random by, getting the difference
@@ -53,13 +96,31 @@ function getSpace( number, range ) {
 function getWord() {
 	// get a random number. Which will be the location of the random
 	// word to return to any function that called this method.
-	var location = getRandNumber(len_words, 0);
-	var word = words[ location ];
-	return word;
+	var location = 0;
+	var word;
+
+	// console.log( "Level:", currentLevel );
+
+	if ( currentLevel == "3" ) {
+		console.log( "LEVEL ONE ");
+		location = getRandNumber( levelThreeWords.length, 0 );
+		word = levelThreeWords[ location ];
+		return word;
+	}
+	else if( currentLevel == "2" ) {
+		console.log("LEVEL TWO");
+		location = getRandNumber( levelTwoWords.length, 0);
+		word = levelTwoWords[ location ];
+		return word;
+	}
+	else {
+		// console.log("LEVEL ONE");
+		location = getRandNumber( levelOneWords.length, 0);
+		word = levelOneWords[ location ];
+		return word;
+	}
+	
 }
-
-
-
 
 
 
@@ -74,12 +135,12 @@ function mk_puzzle_word( word ) {
 
 
 	if ( len_word <= 5 ) {
-		console.log("Running first condition");
+		// console.log("Running first condition");
 		// get a random number
 		// var loc_show_letter = getRandNumber( len_word, 0 );
 		spaces = getSpace( 4, len_word );
 		getSpaces = spaces;
-		console.log( word, spaces );
+		// console.log( word, spaces );
 
 		// initialise var to hold the puzzled word.
 		// var puzzle_word = ""; 
@@ -104,10 +165,10 @@ function mk_puzzle_word( word ) {
 
 	// ///////////////////////////////////////////////////////
 	else if( len_word > 5 && len_word <= 8 ) {
-		console.log("Running second condition");
+		// console.log("Running second condition");
 		spaces = getSpace( 5, len_word );
 		getSpaces = spaces;
-		console.log( word, spaces );
+		// console.log( word, spaces );
 		// var puzzle_word = "";
 		for ( var y = 0; y < len_word; y++ ) {
 			var happen1 = 0;
@@ -128,13 +189,13 @@ function mk_puzzle_word( word ) {
 
 	// ////////////////////////////////////////////////////////
 	else if ( len_word > 8 ) {
-		console.log("Running third condition");
+		// console.log("Running third condition");
 		// number of spaces that must be left empty
 		var number_space = 6; 
 		spaces = getSpace( number_space, len_word );
 		getSpaces = spaces;
-		// console.log( spaces );
-		console.log( word, spaces );
+
+		// console.log( word, spaces );
 		// var puzzle_word = "";
 		for ( var item = 0; item < len_word; item++ ) {
 			var happen2 = 0;
@@ -154,9 +215,6 @@ function mk_puzzle_word( word ) {
 		return puzzle_word;
 	}
 }
-
-
-
 
 
 
@@ -209,10 +267,6 @@ function nextWord() {
 	var puz_word1 = document.getElementById("puz_word");
 	puz_word1.innerHTML = puzzle_word;
 }
-
-
-
-
 
 
 

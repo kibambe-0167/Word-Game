@@ -33,8 +33,20 @@
 
 
     <!-- The board for scores and number of lifes in future. -->
-    <div id="board">
-      <h2 >Score: </h2> <h2 id="score" value="" >0</h2>
+    <div id="board" class="container">
+      <div class = "row" id="lev" >
+        <div style="width: 40%;"  >
+          <select id="level" value = "1" name="level" class="form-control">
+            <option value="1" selected >Level 1</option>
+            <option value="2" >Level 2</option>
+            <option value="3" >Level 3</option>
+          </select>
+        </div>
+
+        <div style="width: 60%; text-align: right;">
+          <h2 >Score: </h2> <h2 id="score" value="" >0</h2> 
+        </div>
+      </div>
     </div>
 
 

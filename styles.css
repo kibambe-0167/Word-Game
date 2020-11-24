@@ -36,9 +36,9 @@ a:hover {
 }
 
 #board {
-	text-align: right;
-	padding-right: 10px;
+	padding: 10px 20px 0px 0px;
 	margin-bottom: 20px;
+	text-align: center;
 }
 #score {
 	color: rgb( 0, 0, 150);
@@ -87,6 +87,14 @@ input {
 .enter-div {
 	margin-left: 5px;
 	text-align: left;
+}
+
+#level {
+	width: 90%;
+}
+#lev {
+	margin-left: 10px;
+	text-align: center;
 }
 
 #intructions {
