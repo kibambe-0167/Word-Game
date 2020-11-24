@@ -102,13 +102,13 @@ function getWord() {
 	// console.log( "Level:", currentLevel );
 
 	if ( currentLevel == "3" ) {
-		console.log( "LEVEL ONE ");
+		// console.log( "LEVEL ONE ");
 		location = getRandNumber( levelThreeWords.length, 0 );
 		word = levelThreeWords[ location ];
 		return word;
 	}
 	else if( currentLevel == "2" ) {
-		console.log("LEVEL TWO");
+		// console.log("LEVEL TWO");
 		location = getRandNumber( levelTwoWords.length, 0);
 		word = levelTwoWords[ location ];
 		return word;
